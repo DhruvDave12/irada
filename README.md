@@ -1,16 +1,15 @@
 # iradamobile
 
-A new Flutter project.
+We wanted to build something around intents. The idea is to let users store addresses as contacts and integrate voice assistants like google assistant / siri / alexa to initiate transactions seamlessly. A simple instruction like "Send X 5 ETH on Polygon" will go through the following process
+1. Go to the contacts app figure and figure out wallet address of X
+2. Figure out (through intents) what the user wants to do, in this case a simple transaction 
+3. Initiate a transaction so that the user only clicks sign.
 
-## Getting Started
+The idea seems interesting but we spent majority of time in figuring out how to integrate google assistant into our application and hence we couldn't complete the project.
 
-This project is a starting point for a Flutter application.
+## How its built
+The project uses web3Auth flutter sdk for connecting wallet and a basic flutter application to store contacts. We tried using google assistant and Open AI's api keys to resolve intents.
 
-A few resources to get you started if this is your first Flutter project:
+The application stores data locally, a simple DB structure with ContactName as primary key and contacts are stored in key value pairs inorder to enable intents of the type "Send X 5 ETH on his dev wallet"
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
