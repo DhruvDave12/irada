@@ -1,0 +1,7 @@
+{
+    "operation": "string",
+    "name": "string",
+    "chain": "string",
+    "currency": "string",
+    "amount": "double"
+}

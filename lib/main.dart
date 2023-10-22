@@ -1,9 +1,13 @@
+import 'package:dart_openai/dart_openai.dart';
 import 'package:flutter/material.dart';
 import 'package:iradamobile/providers/contacts_provider.dart';
 import 'package:iradamobile/screens/contacts.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
-void main() {
+Future main() async {
+  await dotenv.load(fileName: ".env");
+  OpenAI.apiKey = dotenv.get('OPENAI_API_KEY');
   runApp(MultiProvider(providers: [
     ChangeNotifierProvider(create: (context) => DatabaseProvider())
   ], child: const MyApp()));
